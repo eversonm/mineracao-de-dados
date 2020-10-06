@@ -1,5 +1,5 @@
 # Mineracão de Dados
-Trabalho final de Mineração de Dados
+Trabalho final de Mineração de Dados - 06/10/2020
 ### Python Requisitos
 <a href="https://www.python.org/doc/versions/">
 	<img src="https://img.shields.io/badge/python-3.6%20%7C%203.7%20%7C%203.8-blue?style=for-the-badge" alt="Python compatible versions" />
