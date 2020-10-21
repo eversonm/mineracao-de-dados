@@ -88,7 +88,9 @@ all_data = all_data[all_data['CIDADE']=='S.Paulo']
 
 all_data.drop(686741, inplace=True)
 
-all_data['DATAOCORRENCIA'] = pd.to_datetime(all_data['DATAOCORRENCIA'], errors='coerce')
+all_data['datacorreta'] = pd.to_datetime(all_data['DATAOCORRENCIA'], format='%d/%m/%Y', errors = 'coerce')
+all_data.drop(all_data[all_data['datacorreta'].isnull()].index, inplace=True)
+all_data.drop(all_data[all_data['datacorreta']<'2010-01-01'].index, inplace=True)
 
 import csv
-all_data.to_csv('file.csv',index=False, doublequote=False, decimal='.', escapechar=' ', sep=',')
+all_data.to_csv('all_data.csv',index=False, doublequote=False, decimal='.', escapechar=' ', sep=',')
